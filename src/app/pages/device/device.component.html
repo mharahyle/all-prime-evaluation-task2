@@ -1,0 +1,59 @@
+
+<!-- bluetooth.component.html -->
+<mat-toolbar>
+    <button mat-icon-button (click)="goBack()">
+      <mat-icon>arrow_back</mat-icon>
+    </button>
+    <span class="toolbar-title">{{deviceId}}</span>
+  </mat-toolbar>
+  
+  <div class="device-container">
+    <div>
+        <mat-icon>battery_std</mat-icon>
+    </div>
+    <!-- Battery Status -->
+    <div class="battery-status">
+      
+      <span>{{batteryLevel}}% {{lastUpdated | date:'MMMM d, y h:mm a'}}</span>
+    </div>
+  
+    <!-- Bluetooth Connection Circle -->
+    <div class="bluetooth-circle" [class.connectable]="isConnectable">
+      <mat-icon class="bluetooth-icon">bluetooth</mat-icon>
+      <p>Connectable</p>
+    </div>
+  
+    <!-- Bluetooth Label -->
+    <div class="bluetooth-label">
+      <mat-icon>bluetooth_searching</mat-icon>
+      <p>Bluetooth</p>
+    </div>
+
+    <div class="icon-container">
+        <div class="icon-item">
+          <div class="icon-circle">
+            <mat-icon>home</mat-icon>
+          </div>
+          <span class="icon-text">Away mode</span>
+        </div>
+        <div class="icon-item">
+            <div class="icon-circle">
+              <mat-icon>notifications</mat-icon>
+            </div>
+            <span class="icon-text">Activities</span>
+          </div>
+          <div class="icon-item">
+            <div class="icon-circle">
+              <mat-icon>share</mat-icon>
+            </div>
+            <span class="icon-text">Share</span>
+          </div>
+          <div class="icon-item" (click)="navigateToHelp()">
+            <div class="icon-circle">
+              <mat-icon>settings</mat-icon>
+            </div>
+            <span class="icon-text">Settings</span>
+          </div>
+      </div>
+  
+  </div>

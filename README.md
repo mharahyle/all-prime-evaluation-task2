@@ -1,5 +1,54 @@
 # AllPrimeEvaluationTask2
 
+## Project Overview
+
+AllPrimeEvaluationTask2 is an Angular-based application designed to evaluate prime numbers. The application provides a user-friendly interface to input numbers and check if they are prime. It also includes features to display a list of prime numbers within a specified range.
+
+## Features
+
+- Input a number to check if it is prime
+- Display a list of prime numbers within a given range
+- Responsive design for optimal viewing on different devices
+- Fast and efficient prime number evaluation algorithm
+
+## Installation
+
+To set up the project locally, follow these steps:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/all-prime-evaluation-task-2.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd all-prime-evaluation-task-2
+   ```
+
+3. Install the project dependencies:
+
+   ```bash
+   npm install
+   ```
+
+## Usage
+
+After installing the dependencies, you can start the development server and use the application as described in the Development server section.
+
+## Contributing
+
+Contributions are welcome! If you have any ideas, suggestions, or bug reports, please open an issue or submit a pull request. Make sure to follow the project's code of conduct.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or inquiries, please contact the project maintainer at [your-email@example.com](mailto:your-email@example.com).
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.1.
 
 ## Development server

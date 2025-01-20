@@ -1,0 +1,30 @@
+<div class="help-center">
+    <mat-toolbar >
+        <button mat-icon-button (click)="goBack()">
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+      <span class="toolbar-title">Help Center</span>
+    </mat-toolbar>
+  
+    <div class="help-items">
+      <mat-list>
+        <ng-container *ngFor="let item of helpItems">
+          <mat-list-item>
+            <div class="list-content">
+              <div class="icon-circle" [ngStyle]="{ 'background-color': item.color }">
+                <mat-icon>{{ item.icon }}</mat-icon>
+              </div>
+              <div class="text-and-chevron">
+                <div class="text-content">
+                  {{ item.text }}
+                </div>
+                <mat-icon class="chevron-icon">chevron_right</mat-icon>
+              </div>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </ng-container>
+      </mat-list>
+    </div>
+  </div>
+  

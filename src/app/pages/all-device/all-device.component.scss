@@ -1,0 +1,198 @@
+.device-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.device-list {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.device-card {
+  
+  margin: 8px;
+  border-radius: 0;
+  border-bottom: 1px solid #e7e7e7;
+  background:white;
+}
+
+.device-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 6px;
+  flex-wrap: wrap;
+}
+
+.device-content {
+  display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      width: 100%;
+}
+
+.device-icon mat-icon {
+  font-size: 48px;
+  height: 100%;
+}
+
+.device-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.device-text h3 {
+  font-weight: 400;
+  margin: 0;
+  color: #242424;
+}
+.device-text p {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0;
+  color: #494949;
+}
+
+.device-card mat-card-content{
+  padding: 10px;
+}
+.device-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 1px;
+  justify-content:space-between ;
+  mat-icon{
+    color: #767676
+  }
+}
+
+
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  
+}
+.bottom-nav  button {
+
+  span {
+    display: block;
+    font-weight: 400;
+    line-height: normal;
+    font-size: smaller;
+  }
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: fit-content;
+    color: #757575;
+    background: none;
+    mat-icon {
+      font-size: x-large;
+    margin: 0px;
+    width: max-content;
+    height: fit-content;
+    color: #757575;
+    }
+}
+
+.active-link {
+  color: #6d97d9;
+}
+
+.nav-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nav-item.active {
+  color: #1976d2;
+}
+
+.bluetooth-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 1px solid #1976d2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  &.connectable {
+    border-color: #3485e4;
+    color: #1976d2;
+  }
+
+  .bluetooth-icon {
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+    margin-bottom: 8px;
+    color: #2089fe;
+  }
+
+  p {
+    margin: 0;
+    color: #1976d2;
+  }
+}
+.device-connection{
+  display: flex;
+    align-items: center;
+    font-weight: 100;
+    font-size: smaller;
+    color: #767676;
+    mat-icon{
+      font-size: 22px;
+      width: 25px;
+      height: 25px;
+      font-weight: lighter;
+      color: #bdbdbd;
+    }
+}
+
+mat-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.toolbar-title {
+  flex: 1; /* Take up remaining space */
+  text-align: center; /* Center-align the text */
+  font-size: 18px;
+    font-weight: 400;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 50px) {
+  .device-card {
+    width: 80%;
+    border-radius: 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  .device-item {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align content to the left */
+  }
+
+  .device-actions {
+    justify-content: space-between; /* Align actions to the left */
+    width: 100%; /* Fill the card width */
+  }
+
+  .device-text {
+    width: 100%; /* Fill the card width */
+  }
+}

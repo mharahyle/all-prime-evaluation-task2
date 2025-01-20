@@ -1,0 +1,127 @@
+/* bluetooth.component.scss */
+.device-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+  }
+  
+  .battery-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 40px;
+    font-size: 11px;
+    font-weight: 400;
+  
+    mat-icon {
+      font-size: 20px;
+    }
+  }
+  
+  .bluetooth-circle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 2px solid #1976d2;
+    display: flex
+;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+  
+    &.connectable {
+      border-color: #1976d2;
+      color: #1976d2;
+    }
+  
+    .bluetooth-icon {
+      font-size: 48px;
+      height: 48px;
+      width: 48px;
+      margin-bottom: 8px;
+      font-weight: bolder;
+
+    }
+  
+    p {
+      margin: 0;
+      color: #1976d2;
+      font-size: 11px;
+    }
+  }
+  
+  .bluetooth-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #767676;
+    margin-bottom: 40px;
+  
+    mat-icon {
+      font-size: 24px;
+      margin-bottom: 8px;      
+    color: #76767673;
+    }
+  
+    p {
+      margin: 0;
+      font-size: smaller;
+      margin-bottom: 80px;
+    }
+  }
+
+
+  mat-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .toolbar-title {
+    flex: 1; /* Take up remaining space */
+    text-align: center; /* Center-align the text */
+  }
+  
+  
+
+  .icon-container {
+    display: flex;
+    justify-content: space-around; /* Equal spacing between items */
+    align-items: center;
+    padding: 16px;
+    width: 100%;
+  }
+  
+  .icon-item {
+    display: flex;
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center;
+    text-align: center;
+  }
+  
+  .icon-circle {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #767676;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px; /* Space between icon and text */
+  }
+  
+  .icon-circle mat-icon {
+    font-size: 24px; /* Adjust icon size */
+ 
+  }
+  
+  .icon-text {
+    font-size: 12px;
+    color: #767676;
+  }
+  

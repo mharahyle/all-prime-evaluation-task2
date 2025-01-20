@@ -1,0 +1,82 @@
+<div class="device-container">
+  <!-- Header -->
+  <mat-toolbar color="primary">
+    <span class="toolbar-title">My Devices</span>
+    <span class="toolbar-spacer"></span>
+    <button mat-icon-button aria-label="Add Device" (click)="addDevice()">
+      <mat-icon>add_circle_outline</mat-icon>
+    </button>
+  </mat-toolbar>
+
+  <!-- Device List -->
+  <div class="device-list">
+    <mat-card *ngFor="let device of devices" class="device-card">
+      <mat-card-content>
+        <div class="device-item" (click)="navigateToDetail(device.id)">
+          <div class="device-content">
+            <div class="device-icon">
+              <div class="bluetooth-circle" [class.connectable]="isConnectable">
+                <mat-icon class="bluetooth-icon">bluetooth</mat-icon>
+              </div>
+            </div>
+            <div class="device-text">
+              <h3>{{ device.name }}</h3>
+              <p>{{ device.status }}</p>
+              <div class="device-connection">
+                <mat-icon class="device-conection-icon">bluetooth_searching</mat-icon>
+                <div>Bluetooth</div>
+              </div>
+              <div class="device-actions">
+                <button
+                  mat-icon-button
+                  aria-label="Notifications"
+                  (click)="toggleNotifications()"
+                >
+                  <mat-icon>notifications_none</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  aria-label="Share"
+                  (click)="shareDevice()"
+                >
+                  <mat-icon>share</mat-icon>
+                </button>
+                <button
+                  mat-icon-button
+                  aria-label="Settings"
+                  (click)="openSettings()"
+                >
+                  <mat-icon>settings</mat-icon>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <!-- Bottom Navigation -->
+  <mat-toolbar class="bottom-nav">
+    <button mat-flat-button routerLink="/devices" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue">
+        speaker</mat-icon>
+      <span>Devices</span>
+    </button>
+    <button mat-flat-button routerLink="/history" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue">people</mat-icon>
+      <span>Member</span>
+    </button>
+
+    <button mat-flat-button routerLink="/top-tracks" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue">favorite_border
+      </mat-icon>
+      <span>Inbox</span>
+    </button>
+
+    <button mat-flat-button routerLink="/history" routerLinkActive="active-link">
+      <mat-icon class="material-icons color_blue">history</mat-icon>
+      <span>Me</span>
+    </button>
+  </mat-toolbar>
+</div>
