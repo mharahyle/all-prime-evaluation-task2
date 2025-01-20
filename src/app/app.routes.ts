@@ -4,9 +4,9 @@ import { AllDeviceComponent } from './pages/all-device/all-device.component';
 import { DeviceComponent } from './pages/device/device.component';
 
 export const routes: Routes = [ 
-    { path: '', redirectTo: 'help', pathMatch: 'full' },
+    { path: '', redirectTo: 'devices', pathMatch: 'full' },
     { path: 'devices', component: AllDeviceComponent },
     { path: 'device/:id', component: DeviceComponent },
     { path: 'help', component: HelpComponent },
-    { path: '**', redirectTo: '/help' },
+    { path: '**', redirectTo: '/devices' },
 ];
